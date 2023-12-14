@@ -19,11 +19,11 @@ pattern
 
 .gizmo {
     background-color: rgb(122, 38, 38);
-    height: 280px;
-    width: 220px;
+    height: 380px;
+    width: 300px;
     position: absolute;
-    left: 40%;
-    top: 30%;
+    left: 20%;
+    top: 10%;
     border-radius: 20px;
     box-shadow: 12px 12px 10px #000000 ;
 }
@@ -37,13 +37,49 @@ pattern
     font-size: 10px;
 }
 
+h2 {
+    position: relative;
+    left: 85%;
+}
 
 .gizmo-screen {
-    height: 160px;
-    width: 180px;
+    height: 200px;
+    width: 240px;
     position: relative;
     background-color: rgb(216, 221, 226);
     left: 10%;
     top: 6%;
     border-radius: 10px;
 }
+
+.gizmo-screen img {
+    width: 130px;
+    position: relative;
+    left: 50px;
+}
+h1 {
+    position: relative;
+    align-self: center;
+ }
+
+ .gizmo-controls {
+    position: relative;
+    top: 10%;
+ }
+
+ #bback {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: #535353;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+ }
+ #bnext {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background-color: #535353;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+ }

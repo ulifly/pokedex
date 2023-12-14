@@ -1,28 +1,58 @@
-async function obtenerInformacionPokemon(nombre) {
-  try {
-    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`);
-    if (respuesta.ok) {
-      const datosPokemon = await respuesta.json();
-      // Aquí puedes procesar los datos del Pokémon como desees
-      return datosPokemon;
-    } else {
-      throw new Error('No se encontró información para el Pokémon');
-    }
-  } catch (error) {
-    console.error(error);
-    return null;
+const botonback = document.querySelector('#bback');
+const botonnext = document.querySelector('#bnext');
+const botonrand = document.querySelector('#brand');
+
+botonrand.addEventListener('click', pokerand); 
+
+function pokerand() {
+  let pokeid = Math.floor(Math.random() * 898) + 1;
+  getpoke(pokeid);
+}
+
+
+function getpoke(pokeid) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokeid}`)
+  .then(response => response.json())
+  .then(poke => {
+    const nombre = poke.name;
+    const img = poke.sprites.front_default;
+    const num = poke.id;
+    console.log(nombre, img);
+    document.getElementById('pokecard').innerHTML = `
+      <div class ="card">  
+        <h2 id="pokeid">${num}</h2>
+        <img src="${img}" alt="${nombre}">
+        <h1>${nombre}</h1>
+      </div>
+    `
+  })
+  .catch(error => console.log('Error', error));
+}
+
+
+botonnext.addEventListener('click', pokenext);
+
+function pokenext() {
+  let pokeid = document.getElementById('pokeid').innerHTML;
+  pokeid = parseInt(pokeid);
+  if (pokeid < 898) {
+    pokeid++;
+    getpoke(pokeid);
+  } else {
+    pokeid = 1;
+    getpoke(pokeid);
   }
 }
 
-const nombrePokemon = 'pikachu';
-obtenerInformacionPokemon(nombrePokemon)
-  .then((informacionPokemon) => {
-    if (informacionPokemon) {
-      console.log(`Información de ${nombrePokemon}:`);
-      console.log(`Nombre: ${informacionPokemon.name}`);
-      console.log(`Altura: ${informacionPokemon.height}`);
-      console.log(`Peso: ${informacionPokemon.weight}`);
-    } else {
-      console.log(`No se encontró información para el Pokémon ${nombrePokemon}`);
-    }
-  });
+botonback.addEventListener('click', pokeback);
+function pokeback() {
+  let pokeid = document.getElementById('pokeid').innerHTML;
+  pokeid = parseInt(pokeid);
+  if (pokeid > 1) {
+    pokeid--;
+    getpoke(pokeid);
+  } else {
+    pokeid = 898;
+    getpoke(pokeid);
+  } 
+}

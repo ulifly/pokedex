@@ -56,3 +56,4 @@ function pokeback() {
     getpoke(pokeid);
   } 
 }
+

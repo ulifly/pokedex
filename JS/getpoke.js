@@ -5,7 +5,6 @@ export default function getpoke(pokeid) {
     const nombre = poke.name;
     const img = poke.sprites.front_default;
     const num = poke.id;
-    console.log(nombre, img);
     document.getElementById('pokecard').innerHTML = `
       <div class ="card">  
         <h2 id="pokeid">${num}</h2>

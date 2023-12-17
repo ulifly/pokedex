@@ -19,8 +19,8 @@ pattern
 
 .gizmo {
     background-color: rgb(122, 38, 38);
-    height: 380px;
-    width: 300px;
+    height: 580px;
+    width: 400px;
     position: absolute;
     left: 20%;
     top: 10%;
@@ -43,23 +43,23 @@ h2 {
 }
 
 .gizmo-screen {
-    height: 200px;
-    width: 240px;
+    height: 370px;
+    width: 360px;
     position: relative;
     background-color: rgb(216, 221, 226);
-    left: 10%;
+    left: 20px;
     top: 6%;
     border-radius: 10px;
 }
 
 .gizmo-screen img {
-    width: 130px;
+    width: 250px;
     position: relative;
     left: 50px;
 }
 h1 {
     position: relative;
-    align-self: center;
+    left: 20px;
  }
 
  .gizmo-controls {
@@ -74,6 +74,7 @@ h1 {
     background-color: #535353;
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
+    left: 140px;
  }
  #bnext {
     width: 20px;
@@ -82,4 +83,32 @@ h1 {
     background-color: #535353;
     border-bottom-right-radius: 50%;
     border-top-right-radius: 50%;
+    left: 145px;
+ }
+
+ #binfo {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    border-radius: 50%;
+    
+ }
+
+ .card-i {
+    font-size: 18px;
+    padding-left: 20px;
+  
+ } 
+
+ .card-i h3{
+    background-color: #9bb7cd;
+    width: fit-content;
+ }
+
+ .card-i li {
+    list-style: disc;
+ }
+ .nombre-info {
+    color: #d40303;
  }

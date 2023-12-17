@@ -1,7 +1,11 @@
 const botonback = document.querySelector('#bback');
 const botonnext = document.querySelector('#bnext');
 const botonrand = document.querySelector('#brand');
+const botoninfo = document.querySelector('#binfo');
+
 import getpoke from "./getpoke.js";
+import pokeinfo from "./pokeinfo.js";
+
 
 botonrand.addEventListener('click', pokerand); 
 
@@ -38,3 +42,8 @@ function pokeback() {
   } 
 }
 
+botoninfo.addEventListener('click', pokeinfob);
+function pokeinfob() {
+  let pokeid = document.getElementById('pokeid').innerHTML;
+  pokeinfo(pokeid);
+}

@@ -98,17 +98,27 @@ h1 {
  .card-i {
     font-size: 18px;
     padding-left: 20px;
+    
   
  } 
 
- .card-i h3{
-    background-color: #9bb7cd;
-    width: fit-content;
- }
+
 
  .card-i li {
     list-style: disc;
  }
  .nombre-info {
-    color: #d40303;
+    color: #033b03;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: inline-block;
+    background-color: #862222;
  }
+
+ .card-i #pokeid {
+   width: fit-content;
+   display: inline-block;
+   padding-left: 180px;
+ }
+
+ 

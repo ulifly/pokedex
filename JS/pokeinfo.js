@@ -2,13 +2,15 @@ export default function pokeinfo(pokeid) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokeid}`)
   .then(response => response.json())
   .then(poke => {
+    const img = poke.sprites.front_default;
     const name = poke.name;
     const num = poke.id;
     const hab = poke.abilities;
     const types = poke.types;
     const stats = poke.stats;
     document.getElementById('pokecard').innerHTML = `
-      <div class ="card-i">
+
+      <div class="card-i" style="background-image: url('${img}'); background-repeat: no-repeat; background-size: cover; ">
         <h3 class="nombre-info">${name}</h3> 
         <h3 id="pokeid">${num}</h2>
         <h3>Habilidades:</h3>

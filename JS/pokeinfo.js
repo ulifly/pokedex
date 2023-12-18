@@ -9,8 +9,17 @@ export default function pokeinfo(pokeid) {
     const types = poke.types;
     const stats = poke.stats;
     document.getElementById('pokecard').innerHTML = `
-
-      <div class="card-i" style="background-image: url('${img}'); background-repeat: no-repeat; background-size: cover; ">
+      <div class="wrap-bg" style="overflow: hidden; position: relative;">
+        <img class="poke-bg" src="${img}" style="
+        opacity: 0.9;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;" 
+        alt=""> 
+      </div>
+      <div class="card-i" style="position: relative;"> 
         <h3 class="nombre-info">${name}</h3> 
         <h3 id="pokeid">${num}</h2>
         <h3>Habilidades:</h3>

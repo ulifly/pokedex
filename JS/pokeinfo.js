@@ -13,7 +13,7 @@ export default function pokeinfo(pokeid) {
         <img class="poke-bg" src="${img}" style="
         opacity: 0.3;
         position: absolute;
-        left: 0;
+        left: 50px;
         top: 0;
         width: 100%;
         height: auto;" 

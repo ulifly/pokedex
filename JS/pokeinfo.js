@@ -11,14 +11,14 @@ export default function pokeinfo(pokeid) {
     document.getElementById('pokecard').innerHTML = `
       <div class="wrap-bg" style="overflow: hidden; position: relative;">
         <img class="poke-bg" src="${img}" style="
-        opacity: 0.9;
+        opacity: 0.3;
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: auto;" 
-        alt=""> 
-      </div>
+        alt="">
+      
       <div class="card-i" style="position: relative;"> 
         <h3 class="nombre-info">${name}</h3> 
         <h3 id="pokeid">${num}</h2>
@@ -34,6 +34,7 @@ export default function pokeinfo(pokeid) {
         <ul>
           ${stats.map(s => `<li>${s.stat.name}: ${s.base_stat}</li>`).join('')}
         </ul>
+      </div>
       </div>
     `
   })
